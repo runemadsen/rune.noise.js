@@ -78,6 +78,7 @@ class Noise {
     for (var i = 0; i < PERLIN_SIZE + 1; i++) {
       this.perlin[i] = lcg.rand();
     }
+    return this;
   }
 
   get(x,y,z) {

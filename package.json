@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git://github.com/runemadsen/rune.noise.js"
   },
-  "main" : "dist/noise.node.js",
+  "main" : "dist/rune.noise.node.js",
   "files" : [
     "noise.js"
   ],
