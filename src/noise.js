@@ -1,4 +1,4 @@
-import Rune from "rune.js"
+var Rune = require("rune.js");
 
 // http://mrl.nyu.edu/~perlin/noise/
 // Adapting from P5.js
@@ -26,21 +26,21 @@ for (var i = 0; i < SINCOS_LENGTH; i++) {
 var perlin_PI = SINCOS_LENGTH;
 perlin_PI >>= 1;
 
-class Noise {
+var Noise = function() {
+  this.perlin_octaves = 4; // default to medium smooth
+  this.perlin_amp_falloff = 0.5; // 50% reduction/octave
+  this.perlin = null;
+}
 
-  constructor(url) {
-    this.perlin_octaves = 4; // default to medium smooth
-    this.perlin_amp_falloff = 0.5; // 50% reduction/octave
-    this.perlin = null;
-  }
+Noise.prototype = {
 
-  noiseDetail(lod, falloff) {
+  noiseDetail: function(lod, falloff) {
     if (lod>0)     { this.perlin_octaves = lod; }
     if (falloff>0) { this.perlin_amp_falloff = falloff; }
     return this;
-  }
+  },
 
-  noiseSeed(seed) {
+  noiseSeed: function(seed) {
 
     // Linear Congruential Generator
     // Variant of a Lehman Generator
@@ -79,9 +79,9 @@ class Noise {
       this.perlin[i] = lcg.rand();
     }
     return this;
-  }
+  },
 
-  get(x,y,z) {
+  get: function(x,y,z) {
 
     y = y || 0;
     z = z || 0;
@@ -153,4 +153,4 @@ class Noise {
 
 }
 
-export default Noise;
+module.exports = Noise;
