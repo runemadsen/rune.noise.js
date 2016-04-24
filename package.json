@@ -1,6 +1,6 @@
 {
   "name": "rune.noise.js",
-  "version" : "0.0.2",
+  "version" : "0.0.3",
   "description": "A plugin to allow noise generation in Rune.js",
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
   "dependencies": {
     "rune.js" : "^0.2.3"
   },
+  "keywords" : [
+    "rune.js"
+  ],
   "devDependencies": {
     "gulp": "^3.9.0",
     "browserify": "^11.0.0",
