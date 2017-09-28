@@ -1,6 +1,6 @@
 {
   "name": "rune.noise.js",
-  "version" : "0.0.3",
+  "version" : "0.0.4",
   "description": "A plugin to allow noise generation in Rune.js",
   "repository": {
     "type": "git",
@@ -14,23 +14,9 @@
   },
   "homepage": "http://runemadsen.github.io/rune.js/",
   "dependencies": {
-    "rune.js" : "^0.2.3"
+    "rune.js" : "^1.0.3"
   },
   "keywords" : [
     "rune.js"
-  ],
-  "devDependencies": {
-    "gulp": "^3.9.0",
-    "browserify": "^11.0.0",
-    "gulp-rename": "^1.2.2",
-    "vinyl-source-stream" : "^1.1.0",
-    "vinyl-buffer" : "^1.0.0",
-    "gulp-uglify" : "^1.4.0",
-    "lodash.assign" : "^3.2.0",
-    "gulp-concat" : "^2.6.0",
-    "browserify-shim" : "^3.8.10"
-  },
-  "browserify-shim": {
-    "rune.js": "global:Rune"
-  }
+  ]
 }
